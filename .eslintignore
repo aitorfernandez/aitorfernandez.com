@@ -1,0 +1,3 @@
+*.css
+coverage
+node_modules

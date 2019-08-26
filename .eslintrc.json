@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "airbnb-base",
+    "plugin:jest/recommended"
+  ],
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "browser": true
+  },
+  "rules": {
+    "arrow-parens": ["error", "always"],
+    "class-methods-use-this": "off",
+    "comma-dangle": ["error", "never"],
+    "consistent-return": "off",
+    "import/prefer-default-export": "off",
+    "new-cap": ["error", { "newIsCap": false }],
+    "no-param-reassign": ["error", { "props": false }],
+    "no-undef": "off",
+    "semi-style": ["error", "first"],
+    "semi": [2, "never"]
+  }
+}
