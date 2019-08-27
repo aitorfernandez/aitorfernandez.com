@@ -61,7 +61,7 @@ export default class WelcomeResumeElement extends HTMLElement {
           opacity: .5;
         }
         section h3 {
-          font-size: .8rem;
+          font-size: .7rem;
           letter-spacing: .16em;
           line-height: 60px;
           opacity: .3;
