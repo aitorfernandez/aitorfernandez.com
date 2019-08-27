@@ -15,12 +15,22 @@ const greetings = [
 
 const greeting = greetings[Math.floor(Math.random() * greetings.length)]
 
-function showWelcomeResume({ target }) {
+function tween(target, props) {
+  TweenMax.to(target, 0.3, props)
+}
 
+function showWelcomeResume({ target }) {
+  tween(target, {
+    autoAlpha: 1,
+    display: 'block'
+  })
 }
 
 function hideWelcomeResume({ target }) {
-
+  tween(target, {
+    autoAlpha: 0,
+    display: 'none'
+  })
 }
 
 export default class WelcomeResumeElement extends HTMLElement {
@@ -72,7 +82,7 @@ export default class WelcomeResumeElement extends HTMLElement {
           opacity: .5;
         }
         .wrapper {
-          margin: 3em calc(8% + 12px);
+          margin: 1.5em calc(8% + 12px);
           max-width: ${theme.sizes.maxWidth};
         }
         .greeting {
