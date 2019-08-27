@@ -24,6 +24,13 @@ function onTitleClick(el) {
   projectList.dispatchEvent(
     new CustomEvent('hide-project-list')
   )
+
+  const details = document.createElement('project-details')
+  details.dispatchEvent(
+    new CustomEvent('append-project', {
+      detail: { slug: el.slug }
+    })
+  )
 }
 
 export default class ProjectItemElement extends HTMLElement {
