@@ -46,3 +46,9 @@ body {
 .project-details {
   margin: 1.5em calc(8% + 12px - 6px);
 }
+
+@media (max-width: 544px) {
+  .project-details {
+    margin: 1.5em calc(8% + 12px - 3px);
+  }
+}
