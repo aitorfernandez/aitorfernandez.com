@@ -1,6 +1,7 @@
 import './main.css'
 
 import './app-header-element'
+import './image-grid-element'
 import './more-action-element'
 import './programming-language-element'
 import './project-details-element'

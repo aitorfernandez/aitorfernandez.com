@@ -8,7 +8,7 @@ template.innerHTML = `
       box-sizing: border-box;
     }
   </style>
-  <div class="template">
-    Template
-  </div>
+  <section class="media">
+    <slot name="gallery"></slot>
+  </section>
 `

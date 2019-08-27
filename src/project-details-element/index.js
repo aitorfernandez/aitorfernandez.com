@@ -1,5 +1,6 @@
 import { projectsHTML } from './projectsHTML'
 import { template } from './template'
+import { theme } from '../theme'
 
 function appendProject({ detail, target }) {
   const container = document.createElement('div')
@@ -10,8 +11,9 @@ function appendProject({ detail, target }) {
   container.appendChild(target)
 
   container.style.cssText = `
-    opacity: 1;
     display: block;
+    max-width: ${theme.sizes.maxWidth};
+    opacity: 1;
   `
 
   TweenMax.from(container, 0.3, {
