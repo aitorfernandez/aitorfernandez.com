@@ -14,6 +14,7 @@ function appendProject({ detail, target }) {
     display: block;
     max-width: ${theme.sizes.maxWidth};
     opacity: 1;
+    margin-bottom: 1.5em;
   `
 
   TweenMax.from(container, 0.3, {
