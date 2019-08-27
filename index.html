@@ -32,7 +32,7 @@
       </header>
       <main>
         <div class="position-relative">
-          <div class="project-list position-absolute">
+          <div class="margin position-absolute">
             <project-list>
               <project-item slot="work" slug="lorem-ipsum">
                 <programming-language name="javascript"></programming-language>
@@ -49,11 +49,27 @@
               </project-item>
             </project-list>
           </div>
-          <div class="project-details position-absolute"></div>
+          <div class="project-details margin with-offset position-absolute"></div>
         </div>
       </main>
       <footer>
-        footer content
+        <app-footer class="margin">
+          <a href="https://github.com/aitorfernandez" target="_blank" title="Follow aitorfernandez on Github">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://dev.to/aitorfernandez" target="_blank" title="Follow aitorfernandez on Dev.to">
+            <i class="fab fa-dev"></i>
+          </a>
+          <a href="https://twitter.com/aitorfernandez" target="_blank" title="Follow aitorfernandez on Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="http://t.me/aitorfernandez" target="_blank">
+            <i class="fab fa-telegram"></i>
+          </a>
+          <a href="&#77;&#97;&#105;&#76;&#116;&#79;&#58;&#104;&#101;&#108;&#108;&#111;&#105;&#109;&#97;&#105;&#116;&#111;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#72;&#101;&#108;&#108;&#111;&#37;&#50;&#48;&#116;&#104;&#101;&#114;&#101;&#37;&#50;&#49;">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </app-footer>
       </footer>
     </div>
     <div class="bg-controller position-relative">

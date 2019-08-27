@@ -39,16 +39,16 @@ body {
   z-index: 2;
 }
 
-.project-list {
+.margin {
   margin: 1.5em calc(8% + 12px);
 }
 
-.project-details {
+.with-offset {
   margin: 1.5em calc(8% + 12px - 6px);
 }
 
 @media (max-width: 544px) {
-  .project-details {
+  .with-offset {
     margin: 1.5em calc(8% + 12px - 3px);
   }
 }

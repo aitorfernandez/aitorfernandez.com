@@ -1,5 +1,6 @@
 import './main.css'
 
+import './app-footer-element'
 import './app-header-element'
 import './image-grid-element'
 import './more-action-element'
