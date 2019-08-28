@@ -13,13 +13,13 @@ function tween(props) {
 }
 
 function showBackgroundSketch() {
-  // canvas.play()
+  canvas.play()
 
   tween({ autoAlpha: 1 })
 }
 
 function hideBackgroundSketch() {
-  // canvas.stop()
+  canvas.stop()
 
   tween({ autoAlpha: 0 })
 }
