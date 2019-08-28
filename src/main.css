@@ -25,6 +25,7 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
+  z-index: 2;
 }
 
 .bg {
@@ -32,7 +33,7 @@ body {
 }
 
 .bg-controller {
-  z-index: 2;
+  z-index: 3;
 }
 
 .margin {

@@ -14,6 +14,8 @@ function onClick({ target }) {
 
   if (fas.className === 'fas fa-bars') {
     dispatchEvent('background-sketch', 'hide-background-sketch')
+    dispatchEvent('background-controller', 'hide-background-controller')
+
     dispatchEvent('welcome-resume', 'show-welcome-resume')
 
     tween(target, { backgroundColor: 'white' })
@@ -21,7 +23,13 @@ function onClick({ target }) {
 
     fas.className = 'fas fa-times'
   } else {
-    dispatchEvent('background-sketch', 'show-background-sketch')
+    const [details] = document.getElementsByClassName('project-details')
+
+    if (!details.childNodes.length) {
+      dispatchEvent('background-sketch', 'show-background-sketch')
+      dispatchEvent('background-controller', 'show-background-controller')
+    }
+
     dispatchEvent('welcome-resume', 'hide-welcome-resume')
 
     tween(target, { backgroundColor: theme.palette.secondary })
