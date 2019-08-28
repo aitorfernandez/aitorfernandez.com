@@ -16,7 +16,7 @@ export default class AppFooterElement extends HTMLElement {
           opacity: .7;
         }
         ::slotted(a) {
-          margin-right: .5em;
+          margin-right: .7em;
           text-decoration: none;
           transition: .15s;
         }

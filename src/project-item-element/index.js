@@ -31,6 +31,11 @@ function onTitleClick(el) {
       detail: { slug: 'lorem-ipsum' }
     })
   )
+
+  const [backgroundController] = document.getElementsByTagName('background-controller')
+  backgroundController.dispatchEvent(
+    new CustomEvent('hide-background-controller')
+  )
 }
 
 export default class ProjectItemElement extends HTMLElement {

@@ -69,6 +69,11 @@
         </app-footer>
       </footer>
     </div>
+    <div class="bg-controller position-relative">
+      <background-controller>
+        <round-dot slot="dot" slug="game-of-life" selected></round-dot>
+      </background-controller>
+    </div>
     <script>
       if (!(window.customElements && document.body.attachShadow)) {
         document.querySelector('.app').innerHTML = "<b>Your browser doesn't support Shadow DOM and Custom Elements v1.</b>"
