@@ -20,10 +20,6 @@ body {
   position: relative;
 }
 
-.position-absolute {
-  position: absolute;
-}
-
 .app {
   display: grid;
   grid-template-columns: 100%;

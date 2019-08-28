@@ -20,9 +20,6 @@
     <script src="./dist/main.min.js" defer></script>
   </head>
   <body>
-    <div class="bg position-relative">
-      background
-    </div>
     <div class="app">
       <header>
         <welcome-resume></welcome-resume>
@@ -32,7 +29,7 @@
       </header>
       <main>
         <div class="position-relative">
-          <div class="margin position-absolute">
+          <div class="margin">
             <project-list>
               <project-item slot="work" slug="lorem-ipsum">
                 <programming-language name="javascript"></programming-language>
@@ -49,7 +46,7 @@
               </project-item>
             </project-list>
           </div>
-          <div class="project-details margin with-offset position-absolute"></div>
+          <div class="project-details margin with-offset"></div>
         </div>
       </main>
       <footer>
@@ -71,9 +68,6 @@
           </a>
         </app-footer>
       </footer>
-    </div>
-    <div class="bg-controller position-relative">
-      background controllers
     </div>
     <script>
       if (!(window.customElements && document.body.attachShadow)) {

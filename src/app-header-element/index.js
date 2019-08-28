@@ -10,7 +10,7 @@ export default class AppHeaderElement extends HTMLElement {
         :host {
           align-items: center;
           display: flex;
-          margin-top: 1.5em;
+          margin-top: 3em;
         }
         .more-action {
           position: relative;
