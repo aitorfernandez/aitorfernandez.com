@@ -36,6 +36,11 @@ function onTitleClick(el) {
   backgroundController.dispatchEvent(
     new CustomEvent('hide-background-controller')
   )
+
+  const [backgroundSketch] = document.getElementsByTagName('background-sketch')
+  backgroundSketch.dispatchEvent(
+    new CustomEvent('hide-background-sketch')
+  )
 }
 
 export default class ProjectItemElement extends HTMLElement {

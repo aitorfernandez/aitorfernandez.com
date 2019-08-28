@@ -99,7 +99,7 @@ export default class BackgroundControllerElement extends HTMLElement {
   }
 
   connectedCallback() {
-    // ([bg] = document.getElementsByTagName('background-sketch'))
+    ([bg] = document.getElementsByTagName('background-sketch'))
 
     title = this.shadowRoot.querySelector('.title')
     dots = this.shadowRoot.querySelector('.dots').assignedNodes()
@@ -110,7 +110,7 @@ export default class BackgroundControllerElement extends HTMLElement {
       if (dot.hasAttribute('selected')) {
         const slug = dot.getAttribute('slug')
         titleHTML(slug)
-        // bg.setAttribute('slug', slug)
+        bg.setAttribute('slug', slug)
       }
     })
 
