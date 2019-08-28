@@ -8,17 +8,17 @@ const sketchs = {
 let canvas = null
 
 function tween(props) {
-  const canvas = document.getElementById('defaultCanvas0')
-  TweenMax.to(canvas, .3, props)
+  const defaultCanvas = document.getElementById('defaultCanvas0')
+  TweenMax.to(defaultCanvas, 0.3, props)
 }
 
-function showBackgroundSketch({ target }) {
+function showBackgroundSketch() {
   // canvas.play()
 
   tween({ autoAlpha: 1 })
 }
 
-function hideBackgroundSketch(el) {
+function hideBackgroundSketch() {
   // canvas.stop()
 
   tween({ autoAlpha: 0 })

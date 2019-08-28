@@ -27,7 +27,7 @@ function onDotClick({ target }) {
 }
 
 function tween(target, props) {
-  TweenMax.to(target, .3, props)
+  TweenMax.to(target, 0.3, props)
 }
 
 function showBackgroundController({ target }) {

@@ -6,7 +6,7 @@ function dispatchEvent(tag, event) {
 }
 
 function tween(target, props) {
-  TweenMax.to(target, .3, props)
+  TweenMax.to(target, 0.3, props)
 }
 
 function onClick({ target }) {

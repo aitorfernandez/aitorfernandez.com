@@ -1,4 +1,4 @@
-function showProjectList({ target }) {
+function showProjectList() {
   // ...
 }
 
