@@ -1,8 +1,8 @@
 import { theme } from '../theme'
 
-function dispatchWelcomeResumeEvent(event) {
-  const [resume] = document.getElementsByTagName('welcome-resume')
-  resume.dispatchEvent(new CustomEvent(event))
+function dispatchEvent(tag, event) {
+  const [el] = document.getElementsByTagName(tag)
+  el.dispatchEvent(new CustomEvent(event))
 }
 
 function tween(target, props) {
@@ -13,14 +13,16 @@ function onClick({ target }) {
   const fas = target.shadowRoot.querySelector('.fas')
 
   if (fas.className === 'fas fa-bars') {
-    dispatchWelcomeResumeEvent('show-welcome-resume')
+    dispatchEvent('background-sketch', 'hide-background-sketch')
+    dispatchEvent('welcome-resume', 'show-welcome-resume')
 
     tween(target, { backgroundColor: 'white' })
     tween(fas, { color: theme.palette.secondary })
 
     fas.className = 'fas fa-times'
   } else {
-    dispatchWelcomeResumeEvent('hide-welcome-resume')
+    dispatchEvent('background-sketch', 'show-background-sketch')
+    dispatchEvent('welcome-resume', 'hide-welcome-resume')
 
     tween(target, { backgroundColor: theme.palette.secondary })
     tween(fas, { color: 'white' })

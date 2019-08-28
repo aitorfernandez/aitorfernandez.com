@@ -1,0 +1,3 @@
+[submodule "src/game-of-life"]
+	path = src/game-of-life
+	url = git@github.com:aitorfernandez/game-of-life.git
