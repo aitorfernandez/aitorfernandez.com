@@ -38,12 +38,12 @@ function close() {
   `
 }
 
-function navigation(slug) {
+function navigation(prevWork, nextWork) {
   return `
-    ${topPrevWork(slug)}
-    ${topNextWork(slug)}
-    ${bottomPrevWork(slug)}
-    ${bottomNextWork(slug)}
+    ${topPrevWork(prevWork)}
+    ${topNextWork(nextWork)}
+    ${bottomPrevWork(prevWork)}
+    ${bottomNextWork(nextWork)}
     ${close()}
   `
 }
@@ -51,8 +51,8 @@ function navigation(slug) {
 export const projectsHTML = {
   // Work
   'lorem-ipsum': `
-    ${navigation('lorem-ipsum')}
-    <h2 slot="title">Veuve Clicquot Rich</h2>
+    ${navigation('stet-clite', 'cupiditate-cumque')}
+    <h2 slot="title">Lorem Ipsum</h2>
     <p slot="description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
@@ -72,14 +72,65 @@ export const projectsHTML = {
   `,
 
   'cupiditate-cumque': `
-
+    ${navigation('lorem-ipsum', 'sit-tempore')}
+    <h2 slot="title">Cupiditate Cumque</h2>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <li slot="tools-title" class="tools-title">Tools</li>
+    <li slot="tools">Javascript</li>
+    <li slot="tools">Development</li>
+    <a slot="github" href="/" target="_blank">
+      See on Github
+    </a>
+    <image-grid slot="gallery">
+      <img slot="st" src="https://www.w3schools.com/w3images/underwater.jpg">
+      <img slot="st" src="https://www.w3schools.com/w3images/ocean.jpg">
+      <img slot="st" src="https://www.w3schools.com/w3images/wedding.jpg">
+      <img slot="nd" src="https://www.w3schools.com/w3images/mountainskies.jpg">
+      <img slot="nd" src="https://www.w3schools.com/w3images/rocks.jpg">
+    </image-grid>
   `,
 
   'sit-tempore': `
-
+    ${navigation('cupiditate-cumque', 'stet-clite')}
+    <h2 slot="title">Sit Tempore</h2>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <li slot="tools-title" class="tools-title">Tools</li>
+    <li slot="tools">Javascript</li>
+    <li slot="tools">Development</li>
+    <a slot="github" href="/" target="_blank">
+      See on Github
+    </a>
+    <image-grid slot="gallery">
+      <img slot="st" src="https://www.w3schools.com/w3images/underwater.jpg">
+      <img slot="st" src="https://www.w3schools.com/w3images/ocean.jpg">
+      <img slot="st" src="https://www.w3schools.com/w3images/wedding.jpg">
+      <img slot="nd" src="https://www.w3schools.com/w3images/mountainskies.jpg">
+      <img slot="nd" src="https://www.w3schools.com/w3images/rocks.jpg">
+    </image-grid>
   `,
   'stet-clite': `
-
+    ${navigation('sit-tempore', 'lorem-ipsum')}
+    <h2 slot="title">Stet Clite</h2>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <li slot="tools-title" class="tools-title">Tools</li>
+    <li slot="tools">Javascript</li>
+    <li slot="tools">Development</li>
+    <a slot="github" href="/" target="_blank">
+      See on Github
+    </a>
+    <image-grid slot="gallery">
+      <img slot="st" src="https://www.w3schools.com/w3images/underwater.jpg">
+      <img slot="st" src="https://www.w3schools.com/w3images/ocean.jpg">
+      <img slot="st" src="https://www.w3schools.com/w3images/wedding.jpg">
+      <img slot="nd" src="https://www.w3schools.com/w3images/mountainskies.jpg">
+      <img slot="nd" src="https://www.w3schools.com/w3images/rocks.jpg">
+    </image-grid>
   `
 
   // Side projects

@@ -28,7 +28,7 @@ function onTitleClick(el) {
   const details = document.createElement('project-details')
   details.dispatchEvent(
     new CustomEvent('append-project', {
-      detail: { slug: 'lorem-ipsum' }
+      detail: { slug: el.slug }
     })
   )
 
