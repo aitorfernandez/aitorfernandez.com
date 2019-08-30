@@ -1,6 +1,6 @@
 import { theme } from '../theme'
 
-function dispatchEvent(tag, event) {
+function dispatchEventByTagName(tag, event) {
   const [el] = document.getElementsByTagName(tag)
   el.dispatchEvent(new CustomEvent(event))
 }
@@ -13,10 +13,10 @@ function onClick({ target }) {
   const fas = target.shadowRoot.querySelector('.fas')
 
   if (fas.className === 'fas fa-bars') {
-    dispatchEvent('background-sketch', 'hide-background-sketch')
-    dispatchEvent('background-controller', 'hide-background-controller')
+    dispatchEventByTagName('background-sketch', 'hide-background-sketch')
+    dispatchEventByTagName('background-controller', 'hide-background-controller')
 
-    dispatchEvent('welcome-resume', 'show-welcome-resume')
+    dispatchEventByTagName('welcome-resume', 'show-welcome-resume')
 
     tween(target, { backgroundColor: 'white' })
     tween(fas, { color: theme.palette.secondary })
@@ -26,11 +26,11 @@ function onClick({ target }) {
     const [detailsContainer] = document.getElementsByClassName('project-details-container')
 
     if (!detailsContainer.childNodes.length) {
-      dispatchEvent('background-sketch', 'show-background-sketch')
-      dispatchEvent('background-controller', 'show-background-controller')
+      dispatchEventByTagName('background-sketch', 'show-background-sketch')
+      dispatchEventByTagName('background-controller', 'show-background-controller')
     }
 
-    dispatchEvent('welcome-resume', 'hide-welcome-resume')
+    dispatchEventByTagName('welcome-resume', 'hide-welcome-resume')
 
     tween(target, { backgroundColor: theme.palette.secondary })
     tween(fas, { color: 'white' })

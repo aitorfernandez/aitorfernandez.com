@@ -10,7 +10,7 @@ function showProjectList({ target }) {
 function hideProjectList({ target }) {
   TweenMax.to(target.parentNode, 0.3, {
     x: -96,
-    opacity: 0,
+    autoAlpha: 0,
     display: 'none'
   })
 }

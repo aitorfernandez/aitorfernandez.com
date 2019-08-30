@@ -1,26 +1,35 @@
 import { humanize } from '../utils'
 import { theme } from '../theme'
 
-function dispatchEvent(target, event) {
-  target.dispatchEvent(new CustomEvent(event))
+function dispatchEvent(target, event, props = null) {
+  target.dispatchEvent(new CustomEvent(event, props))
+}
+
+function dispatchEventByTagName(tag, event) {
+  const [el] = document.getElementsByTagName(tag)
+  dispatchEvent(el, event)
+}
+
+function removeProject() {
+  const [detailsContainer] = document.getElementsByClassName('project-details-container')
+  const projectDetails = detailsContainer.firstElementChild.firstElementChild
+  dispatchEvent(projectDetails, 'remove-child')
 }
 
 function onClick({ target }) {
   if (target.slug) {
-    console.log('>open new one')
+    removeProject()
+
+    const details = document.createElement('project-details')
+    dispatchEvent(details, 'append-project', {
+      detail: { slug: target.slug }
+    })
   } else {
-    const [detailsContainer] = document.getElementsByClassName('project-details-container')
-    const projectDetails = detailsContainer.firstElementChild.firstElementChild
-    dispatchEvent(projectDetails, 'remove-child')
+    removeProject()
 
-    const [projectList] = document.getElementsByTagName('project-list')
-    dispatchEvent(projectList, 'show-project-list')
-
-    const [backgroundController] = document.getElementsByTagName('background-controller')
-    dispatchEvent(backgroundController, 'show-background-controller')
-
-    const [backgroundSketch] = document.getElementsByTagName('background-sketch')
-    dispatchEvent(backgroundSketch, 'show-background-sketch')
+    dispatchEventByTagName('project-list', 'show-project-list')
+    dispatchEventByTagName('background-controller', 'show-background-controller')
+    dispatchEventByTagName('background-sketch', 'show-background-sketch')
   }
 }
 
