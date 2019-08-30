@@ -1,5 +1,10 @@
-function showProjectList() {
-  // ...
+function showProjectList({ target }) {
+  TweenMax.to(target.parentNode, 0.3, {
+    autoAlpha: 1,
+    delay: 0.2,
+    display: 'block',
+    x: 0
+  })
 }
 
 function hideProjectList({ target }) {

@@ -1,6 +1,19 @@
 import { humanize } from '../utils'
 import { theme } from '../theme'
 
+function onClick({ target }) {
+  if (target.slug) {
+    console.log('>open new one')
+  } else {
+    const [detailsContainer] = document.getElementsByClassName('project-details-container')
+    const projectDetails = detailsContainer.firstElementChild.firstElementChild
+    projectDetails.dispatchEvent(new CustomEvent('remove-child'))
+
+    const [projectList] = document.getElementsByTagName('project-list')
+    projectList.dispatchEvent(new CustomEvent('show-project-list'))
+  }
+}
+
 export default class ProjectNavElement extends HTMLElement {
   constructor() {
     super()
@@ -9,6 +22,7 @@ export default class ProjectNavElement extends HTMLElement {
     shadowRoot.innerHTML = `
       <style>
         :host {
+          cursor: pointer;
           text-align: ${this.align};
         }
         .action {
@@ -56,6 +70,10 @@ export default class ProjectNavElement extends HTMLElement {
 
   get slug() {
     return this.getAttribute('slug') || ''
+  }
+
+  connectedCallback() {
+    this.addEventListener('click', onClick)
   }
 }
 

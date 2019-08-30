@@ -23,9 +23,9 @@ function onClick({ target }) {
 
     fas.className = 'fas fa-times'
   } else {
-    const [details] = document.getElementsByClassName('project-details')
+    const [detailsContainer] = document.getElementsByClassName('project-details-container')
 
-    if (!details.childNodes.length) {
+    if (!detailsContainer.childNodes.length) {
       dispatchEvent('background-sketch', 'show-background-sketch')
       dispatchEvent('background-controller', 'show-background-controller')
     }
