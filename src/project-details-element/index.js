@@ -19,7 +19,7 @@ function appendProject({ detail, target }) {
 
   TweenMax.from(wrapper, 0.3, {
     autoAlpha: 0,
-    delay: 0.2,
+    delay: 0.3,
     display: 'none',
     x: 96
   })

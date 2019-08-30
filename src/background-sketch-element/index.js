@@ -15,7 +15,7 @@ function tween(props) {
 function showBackgroundSketch() {
   canvas.play()
 
-  tween({ autoAlpha: 1 })
+  tween({ autoAlpha: 1, delay: 0.3 })
 }
 
 function hideBackgroundSketch() {

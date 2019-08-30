@@ -1,16 +1,26 @@
 import { humanize } from '../utils'
 import { theme } from '../theme'
 
+function dispatchEvent(target, event) {
+  target.dispatchEvent(new CustomEvent(event))
+}
+
 function onClick({ target }) {
   if (target.slug) {
     console.log('>open new one')
   } else {
     const [detailsContainer] = document.getElementsByClassName('project-details-container')
     const projectDetails = detailsContainer.firstElementChild.firstElementChild
-    projectDetails.dispatchEvent(new CustomEvent('remove-child'))
+    dispatchEvent(projectDetails, 'remove-child')
 
     const [projectList] = document.getElementsByTagName('project-list')
-    projectList.dispatchEvent(new CustomEvent('show-project-list'))
+    dispatchEvent(projectList, 'show-project-list')
+
+    const [backgroundController] = document.getElementsByTagName('background-controller')
+    dispatchEvent(backgroundController, 'show-background-controller')
+
+    const [backgroundSketch] = document.getElementsByTagName('background-sketch')
+    dispatchEvent(backgroundSketch, 'show-background-sketch')
   }
 }
 

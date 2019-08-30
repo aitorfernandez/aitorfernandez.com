@@ -31,7 +31,7 @@ function tween(target, props) {
 }
 
 function showBackgroundController({ target }) {
-  tween(target, { autoAlpha: 1 })
+  tween(target, { autoAlpha: 1, delay: 0.3 })
 }
 
 function hideBackgroundController({ target }) {
