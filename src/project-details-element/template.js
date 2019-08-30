@@ -62,6 +62,9 @@ template.innerHTML = `
       display: flex;
       justify-content: center;
     }
+    .item {
+      width: 100%;
+    }
   </style>
   <div class="controls-top">
     <slot name="prev-top"></slot>
@@ -87,8 +90,12 @@ template.innerHTML = `
     <slot name="gallery"></slot>
   </section>
   <div class="controls-bottom">
-    <slot name="prev-bottom"></slot>
+    <div class="item">
+      <slot name="prev-bottom"></slot>
+    </div>
     <div class="margin"></div>
-    <slot name="next-bottom"></slot>
+    <div class="item">
+      <slot name="next-bottom"></slot>
+    <div>
   </div>
 `
