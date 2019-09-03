@@ -1,5 +1,6 @@
 import { theme } from '../theme'
-import gameOfLife from '../game-of-life/game-of-life'
+// import gameOfLife from '../game-of-life/game-of-life'
+import gameOfLife from '../test/game-of-life'
 
 const sketchs = {
   'game-of-life': gameOfLife
@@ -10,6 +11,18 @@ let canvas = null
 function tween(props) {
   const defaultCanvas = document.getElementById('defaultCanvas0')
   TweenMax.to(defaultCanvas, 0.3, props)
+}
+
+function play() {
+  canvas.play()
+}
+
+function stop() {
+  canvas.stop()
+}
+
+function reset() {
+  canvas.reset()
 }
 
 function showBackgroundSketch() {
@@ -67,6 +80,10 @@ export default class BackgroundSketchElement extends HTMLElement {
   connectedCallback() {
     this.addEventListener('show-background-sketch', showBackgroundSketch)
     this.addEventListener('hide-background-sketch', hideBackgroundSketch)
+
+    this.addEventListener('stop-sketch', stop)
+    this.addEventListener('play-sketch', play)
+    this.addEventListener('reset-sketch', reset)
   }
 
   attributeChangedCallback(attr, oldValue, newValue) {

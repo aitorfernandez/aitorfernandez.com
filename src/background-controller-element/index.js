@@ -38,6 +38,24 @@ function hideBackgroundController({ target }) {
   tween(target, { autoAlpha: 0 })
 }
 
+function onPause({ target }) {
+  const dispatchEvent = (event) => {
+    bg.dispatchEvent(new CustomEvent(event))
+  }
+
+  if (target.className === 'fas fa-pause') {
+    target.className = 'fas fa-stop'
+    dispatchEvent('stop-sketch')
+  } else {
+    target.className = 'fas fa-pause'
+    dispatchEvent('play-sketch')
+  }
+}
+
+function onSync() {
+  bg.dispatchEvent(new CustomEvent('reset-sketch'))
+}
+
 export default class BackgroundControllerElement extends HTMLElement {
   constructor() {
     super()
@@ -74,12 +92,15 @@ export default class BackgroundControllerElement extends HTMLElement {
           color: rgba(17, 17, 17, .5);
           font-size: .9rem;
         }
-        a.controls {
-          color: ${theme.palette.secondary};
-          cursor: pointer;
+        .controls {
           margin: 0 1.5em;
         }
-        a.controls:hover {
+        .fas {
+          color: ${theme.palette.secondary};
+          cursor: pointer;
+          margin: 0 0.35em;
+        }
+        .fas:hover {
           color: ${theme.palette.secondary};
           outline: none;
           text-shadow: 0 0 12px ${theme.palette.secondary};
@@ -87,9 +108,10 @@ export default class BackgroundControllerElement extends HTMLElement {
       </style>
       <div class="wrapper">
         <div class="title"></div>
-        <a class="controls">
+        <div class="controls">
           <i class="fas fa-pause"></i>
-        </a>
+          <i class="fas fa-sync-alt"></i>
+        </div>
         <slot name="dot" class="dots"></slot>
       </div>
     `
@@ -116,6 +138,12 @@ export default class BackgroundControllerElement extends HTMLElement {
 
     this.addEventListener('show-background-controller', showBackgroundController)
     this.addEventListener('hide-background-controller', hideBackgroundController)
+
+    const pause = this.shadowRoot.querySelector('.fa-pause')
+    pause.addEventListener('click', onPause)
+
+    const sync = this.shadowRoot.querySelector('.fa-sync-alt')
+    sync.addEventListener('click', onSync)
   }
 }
 
