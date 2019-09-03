@@ -1,6 +1,5 @@
 import { theme } from '../theme'
-// import gameOfLife from '../game-of-life/game-of-life'
-import gameOfLife from '../test/game-of-life'
+import gameOfLife from '../game-of-life/game-of-life'
 
 const sketchs = {
   'game-of-life': gameOfLife
@@ -28,7 +27,7 @@ function reset() {
 function showBackgroundSketch() {
   canvas.play()
 
-  tween({ autoAlpha: 1, delay: 0.3 })
+  tween({ autoAlpha: 0.5, delay: 0.3 })
 }
 
 function hideBackgroundSketch() {
@@ -69,7 +68,7 @@ export default class BackgroundSketchElement extends HTMLElement {
         @media (min-width: ${theme.breakpoints.md}) {
           canvas {
             display: block;
-            opacity: 1;
+            opacity: .5;
           }
         }
       </style>

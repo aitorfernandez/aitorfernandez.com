@@ -7,7 +7,7 @@ let title = null
 
 function titleHTML(value) {
   title.innerHTML = `
-    See more about <a href="https://github.com/aitorfernandez/${value}" target="_blank">${humanize(value)}</a> background
+    See more about the <a href="https://github.com/aitorfernandez/${value}" target="_blank">${humanize(value)}</a> background
   `
 }
 
