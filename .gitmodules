@@ -1,3 +1,6 @@
 [submodule "src/game-of-life"]
 	path = src/game-of-life
 	url = git@github.com:aitorfernandez/game-of-life.git
+[submodule "src/math-motion"]
+	path = src/math-motion
+	url = git@github.com:aitorfernandez/math-motion.git
