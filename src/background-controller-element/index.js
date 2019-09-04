@@ -1,9 +1,7 @@
 import { humanize } from '../utils'
 import { theme } from '../theme'
 
-let bg = null
-let dots = null
-let title = null
+let bg, dots, title, pause
 
 function titleHTML(value) {
   title.innerHTML = `
@@ -24,6 +22,8 @@ function onDotClick({ target }) {
 
   titleHTML(target.getAttribute('slug'))
   bg.setAttribute('slug', target.getAttribute('slug'))
+
+  pause.className = 'fas fa-pause'
 }
 
 function tween(target, props) {
@@ -128,18 +128,19 @@ export default class BackgroundControllerElement extends HTMLElement {
 
     dots.forEach((dot) => {
       dot.addEventListener('click', onDotClick)
-
-      if (dot.hasAttribute('selected')) {
-        const slug = dot.getAttribute('slug')
-        titleHTML(slug)
-        bg.setAttribute('slug', slug)
-      }
     })
+
+    const dot = dots[Math.floor(Math.random() * dots.length)]
+    const slug = dot.getAttribute('slug')
+
+    dot.setAttribute('selected', '')
+    titleHTML(slug)
+    bg.setAttribute('slug', slug)
 
     this.addEventListener('show-background-controller', showBackgroundController)
     this.addEventListener('hide-background-controller', hideBackgroundController)
 
-    const pause = this.shadowRoot.querySelector('.fa-pause')
+    pause = this.shadowRoot.querySelector('.fa-pause')
     pause.addEventListener('click', onPause)
 
     const sync = this.shadowRoot.querySelector('.fa-sync-alt')
