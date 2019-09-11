@@ -4,3 +4,6 @@
 [submodule "src/gravitational-attraction"]
 	path = src/gravitational-attraction
 	url = git@github.com:aitorfernandez/gravitational-attraction.git
+[submodule "src/math-motion"]
+	path = src/math-motion
+	url = git@github.com:aitorfernandez/math-motion.git

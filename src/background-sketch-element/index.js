@@ -1,8 +1,10 @@
 import { theme } from '../theme'
 import gameOfLife from '../game-of-life/game-of-life'
+import mathMotion from '../math-motion/math-motion'
 
 const sketchs = {
-  'game-of-life': gameOfLife
+  'game-of-life': gameOfLife,
+  'math-motion': mathMotion
 }
 
 let canvas = null
