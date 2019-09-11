@@ -29,6 +29,11 @@ function stop() {
 
 function reset() {
   canvas.reset()
+
+  if (!running) {
+    play()
+    stop()
+  }
 }
 
 function showBackgroundSketch() {
