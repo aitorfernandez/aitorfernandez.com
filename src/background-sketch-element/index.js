@@ -1,9 +1,11 @@
 import { theme } from '../theme'
 import gameOfLife from '../game-of-life/game-of-life'
+import gravitationalAttraction from '../gravitational-attraction/gravitational-attraction'
 import mathMotion from '../math-motion/math-motion'
 
 const sketchs = {
   'game-of-life': gameOfLife,
+  'gravitational-attraction': gravitationalAttraction,
   'math-motion': mathMotion
 }
 
