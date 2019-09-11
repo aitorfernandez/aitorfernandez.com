@@ -10,6 +10,7 @@ const sketchs = {
 }
 
 let canvas = null
+let running = true
 
 function tween(props) {
   const defaultCanvas = document.getElementById('defaultCanvas0')
@@ -18,10 +19,12 @@ function tween(props) {
 
 function play() {
   canvas.play()
+  running = true
 }
 
 function stop() {
   canvas.stop()
+  running = false
 }
 
 function reset() {
@@ -29,7 +32,9 @@ function reset() {
 }
 
 function showBackgroundSketch() {
-  canvas.play()
+  if (running) {
+    canvas.play()
+  }
 
   tween({ autoAlpha: 0.5, delay: 0.3 })
 }
