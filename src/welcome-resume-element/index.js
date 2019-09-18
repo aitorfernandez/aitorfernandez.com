@@ -118,6 +118,7 @@ export default class WelcomeResumeElement extends HTMLElement {
           font-weight: 500;
         }
         .japanese-ascii {
+          font-size: .9rem;
           margin: 0 .5em;
           opacity: .5;
           white-space: pre;
@@ -154,6 +155,7 @@ export default class WelcomeResumeElement extends HTMLElement {
               <li>Ruby</li>
               <li>Lua</li>
               <li>C++</li>
+              <li>Solidity</li>
             </ul>
             <ul>
               <li class="title">Frameworks / Libraries</li>
@@ -161,11 +163,18 @@ export default class WelcomeResumeElement extends HTMLElement {
               <li>Webpack</li>
               <li>p5.js</li>
               <li>Ruby on Rails</li>
+              <li>Cocos2d-x</li>
+              <li>Ethereum Web3</li>
             </ul>
             <ul>
               <li class="title">Databases</li>
               <li>MongoDB</li>
               <li>MySQL</li>
+            </ul>
+            <ul>
+              <li class="title">More stuff</li>
+              <li>RabbitMQ</li>
+              <li>Redis</li>
             </ul>
           </div>
         </section>
@@ -196,10 +205,13 @@ export default class WelcomeResumeElement extends HTMLElement {
             Get in touch
           </h3>
           <p class="touch">
-            I'm always open to collaborations and coding fun stuff <span class="japanese-ascii">＼(＾▽＾)／</span> - just
+            I'm always open to collaborations and coding fun stuff, just email me at
             <a href="&#77;&#97;&#105;&#76;&#116;&#79;&#58;&#104;&#101;&#108;&#108;&#111;&#105;&#109;&#97;&#105;&#116;&#111;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#72;&#101;&#108;&#108;&#111;&#37;&#50;&#48;&#116;&#104;&#101;&#114;&#101;&#37;&#50;&#49;">
-              email me.
+              helloimaitor [at] gmail [dot] com
             </a>
+          </p>
+          <p>
+            <span class="japanese-ascii">＼(＾▽＾)／</span>
           </p>
         </section>
       </div>
