@@ -57,14 +57,13 @@ export const projectsHTML = {
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
-    <li slot="tools">Javascript</li>
+    <li slot="tools">HTML5 / CSS3</li>
+    <li slot="tools">Javascript / TypeScript</li>
+    <li slot="tools">React / Redux</li>
+    <li slot="tools">Etherum Solidity / Web3 / Ganache</li>
     <li slot="tools">Blockchain</li>
     <image-grid slot="gallery">
-      <img slot="st" src="https://www.w3schools.com/w3images/underwater.jpg">
-      <img slot="st" src="https://www.w3schools.com/w3images/ocean.jpg">
-      <img slot="st" src="https://www.w3schools.com/w3images/wedding.jpg">
-      <img slot="nd" src="https://www.w3schools.com/w3images/mountainskies.jpg">
-      <img slot="nd" src="https://www.w3schools.com/w3images/rocks.jpg">
+      <img slot="md" src="assets/qadre/screenshot-1.png">
     </image-grid>
   `,
   'gamesys': `
@@ -74,22 +73,19 @@ export const projectsHTML = {
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
+    <li slot="tools">HTML5 / CSS3</li>
     <li slot="tools">Javascript</li>
     <li slot="tools">Lua</li>
-    <li slot="tools">Ruby</li>
-    <li slot="tools">HTML5/CSS3</li>
+    <li slot="tools">Ruby / Ruby on Rails</li>
     <image-grid slot="gallery">
-      <img slot="st" src="https://www.w3schools.com/w3images/underwater.jpg">
-      <img slot="st" src="https://www.w3schools.com/w3images/ocean.jpg">
-      <img slot="st" src="https://www.w3schools.com/w3images/wedding.jpg">
-      <img slot="nd" src="https://www.w3schools.com/w3images/mountainskies.jpg">
-      <img slot="nd" src="https://www.w3schools.com/w3images/rocks.jpg">
+      <img slot="md" src="assets/gamesys/screenshot-virgin.png">
+      <img slot="md" src="assets/gamesys/screenshot-jungle-jump.png">
+      <img slot="md" src="assets/gamesys/screenshot-barnayard.png">
     </image-grid>
   `,
-
   // Side projects
   'seven-monkeys': `
-    ${navigation('gamesys', 'random-cave')}
+    ${navigation('gamesys', 'roguelike')}
     <h2 slot="title">Seven Monkeys</h2>
     <p slot="description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -99,19 +95,32 @@ export const projectsHTML = {
     <li slot="tools">C++</li>
     <li slot="tools">iOS</li>
     <a slot="github" href="https://github.com/aitorfernandez/seven-monkeys" target="_blank">
-      See on Github
+      See Code on Github
     </a>
     <image-grid slot="gallery">
-      <img slot="st" src="assets/seven-monkeys/screenshot-1.png">
-      <img slot="st" src="assets/seven-monkeys/screenshot-2.png">
-      <img slot="nd" src="assets/seven-monkeys/screenshot-3.png">
-      <img slot="nd" src="assets/seven-monkeys/screenshot-4.png">
+      <img slot="md" src="assets/seven-monkeys/screenshot.png">
     </image-grid>
   `,
-
   // Lab & prototyping
+  'roguelike': `
+    ${navigation('seven-monkeys', 'random-cave')}
+    <h2 slot="title">Roguelike</h2>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <li slot="tools-title" class="tools-title">Tools</li>
+    <li slot="tools">Javascript</li>
+    <li slot="tools">p5js</li>
+    <li slot="tools">rot-js</li>
+    <a slot="github" href="https://github.com/aitorfernandez/roguelike" target="_blank">
+      See Code on Github
+    </a>
+    <image-grid slot="gallery">
+      <img slot="md" src="assets/roguelike/screenshot.png">
+    </image-grid>
+  `,
   'random-cave': `
-    ${navigation('seven-monkeys', 'triangle-pattern')}
+    ${navigation('roguelike', 'trackicon-invaders')}
     <h2 slot="title">Random Cave</h2>
     <p slot="description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -120,16 +129,31 @@ export const projectsHTML = {
     <li slot="tools">Javascript</li>
     <li slot="tools">p5js</li>
     <a slot="github" href="https://github.com/aitorfernandez/random-cave" target="_blank">
-      See on Github
+      See Code on Github
     </a>
     <image-grid slot="gallery">
-      <img slot="st" src="assets/random-cave/screenshot-1.png">
-      <img slot="nd" src="assets/random-cave/screenshot-2.png">
-      <img slot="nd" src="assets/random-cave/screenshot-3.png">
+      <img slot="md" src="assets/random-cave/screenshot.png">
+    </image-grid>
+  `,
+  'trackicon-invaders': `
+    ${navigation('random-cave', 'triangle-pattern')}
+    <h2 slot="title">Trackicon Invaders</h2>
+    <p slot="description">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+    </p>
+    <li slot="tools-title" class="tools-title">Tools</li>
+    <li slot="tools">Javascript</li>
+    <li slot="tools">Spotify Web API</li>
+    <li slot="tools">p5js</li>
+    <a slot="github" href="https://github.com/aitorfernandez/trackicon-invaders" target="_blank">
+      See Code on Github
+    </a>
+    <image-grid slot="gallery">
+      <img slot="md" src="assets/trackicon-invaders/screenshot.png">
     </image-grid>
   `,
   'triangle-pattern': `
-    ${navigation('random-cave', 'qadre')}
+    ${navigation('trackicon-invaders', 'qadre')}
     <h2 slot="title">Triangle Pattern</h2>
     <p slot="description">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -138,13 +162,10 @@ export const projectsHTML = {
     <li slot="tools">Javascript</li>
     <li slot="tools">p5js</li>
     <a slot="github" href="https://github.com/aitorfernandez/triangle-pattern" target="_blank">
-      See on Github
+      See Code on Github
     </a>
     <image-grid slot="gallery">
-      <img slot="st" src="assets/triangle-pattern/screenshot-1.png">
-      <img slot="st" src="assets/triangle-pattern/screenshot-2.png">
-      <img slot="nd" src="assets/triangle-pattern/screenshot-3.png">
-      <img slot="nd" src="assets/triangle-pattern/screenshot-4.png">
+      <img slot="md" src="assets/triangle-pattern/screenshot.png">
     </image-grid>
   `
 }
