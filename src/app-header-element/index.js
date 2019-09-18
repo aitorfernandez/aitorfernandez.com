@@ -41,11 +41,11 @@ export default class AppHeaderElement extends HTMLElement {
         <slot></slot>
       </div>
       <div class="wrapper">
-        <a href="/">
+        <a href="http://aitorfernandez.com">
           <h1>
-            Lorem ipsum dolor sit amet
+            Aitor Fern&aacute;ndez
             <span>
-              consectetur adipisicing elit
+              Software Engineer
             </span>
           </h1>
         </a>

@@ -49,11 +49,13 @@ template.innerHTML = `
     ::slotted(a) {
       color: rgba(17, 17, 17, 0.5);
       font-size: .9rem;
-      line-height: 60px;
       transition: opacity .3s;
     }
     ::slotted(a:hover) {
       opacity: .5;
+    }
+    .github {
+      margin: 1.5em 0;
     }
     .media {
       margin: 0 0 1.5em;
@@ -84,7 +86,9 @@ template.innerHTML = `
       <slot name="tools-title"></slot>
       <slot name="tools"></slot>
     </ul>
-    <slot name="github"></slot>
+    <div class="github">
+      <slot name="github"></slot>
+    </div>
   </section>
   <section class="media">
     <slot name="gallery"></slot>

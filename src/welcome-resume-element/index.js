@@ -132,13 +132,13 @@ export default class WelcomeResumeElement extends HTMLElement {
         <section>
           <div class="about">
             How's it going? I'm
-            <a href="" title="Aitor Fernandez - Personal Portfolio">
+            <b>
               Aitor Fern&aacute;ndez
-            </a>
+            </b>
             a multidisciplinary software engineer who loves Creative Coding. Welcome to my
-            <a href="#">
+            <b>
               portfolio
-            </a>
+            </b>
             of professional works and code experiments.
           </div>
         </section>
@@ -149,18 +149,16 @@ export default class WelcomeResumeElement extends HTMLElement {
           <div class="tools">
             <ul>
               <li class="title">Languages</li>
-              <li>HTML5</li>
-              <li>CSS3</li>
+              <li>HTML5 / CSS3</li>
               <li>Javascript / ES6 / Typescript</li>
-              <li>Lua</li>
               <li>Ruby</li>
+              <li>Lua</li>
               <li>C++</li>
             </ul>
             <ul>
-              <li class="title">Frameworks / Libraries / Budlers</li>
+              <li class="title">Frameworks / Libraries</li>
+              <li>React / Redux</li>
               <li>Webpack</li>
-              <li>React</li>
-              <li>Redux</li>
               <li>p5.js</li>
               <li>Ruby on Rails</li>
             </ul>

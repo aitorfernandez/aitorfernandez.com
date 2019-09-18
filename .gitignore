@@ -3,6 +3,7 @@
 *.swp
 .DS_Store
 .tags
+assets
 dist
 kko
 node_modules
