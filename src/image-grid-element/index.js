@@ -21,22 +21,29 @@ export default class ImageGridElement extends HTMLElement {
             padding: 3px;
           }
         }
-        .wrapper {
+        .one-column {
+          flex: 100%;
+          max-width: 100%;
+        }
+        .two-column {
           flex: 50%;
           max-width: 50%;
         }
         @media (max-width: ${theme.breakpoints.sm}) {
-          .wrapper {
+          .two-column {
             flex: 100%;
             max-width: 100%;
           }
         }
       </style>
-      <div class="wrapper">
+      <div class="two-column">
         <slot name="st"></slot>
       </div>
-      <div class="wrapper">
+      <div class="two-column">
         <slot name="nd"></slot>
+      </div>
+      <div class="one-column">
+        <slot name="md"></slot>
       </div>
     `
   }
