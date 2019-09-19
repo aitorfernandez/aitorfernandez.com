@@ -70,7 +70,7 @@ export const projectsHTML = {
     ${navigation('qadre', 'seven-monkeys')}
     <h2 slot="title">Gamesys</h2>
     <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      As part of my role as Frontend Developer at Gamesys, I worked in the process of product development for a variety of poker games and multiline slot games.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
     <li slot="tools">HTML5 / CSS3</li>
@@ -88,7 +88,10 @@ export const projectsHTML = {
     ${navigation('gamesys', 'roguelike')}
     <h2 slot="title">Seven Monkeys</h2>
     <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      An iOS Poker Puzzle released in 2016 released on App Store. The game uses Cocos2dx-3.X Engine.
+    </p>
+    <p slot="description">
+      The game generates a variety of puzzles to help the player to understand the rules and mathematics of Texas Hold'em Poker. There are seven puzzles with three levels of difficulty each; they are about: Poker Hands, Poker Positions, Best Hands, Flop Textures, Outs, Pot Odds, PreFlop Strategy.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
     <li slot="tools">Cocos2d-x</li>
@@ -106,7 +109,10 @@ export const projectsHTML = {
     ${navigation('seven-monkeys', 'random-cave')}
     <h2 slot="title">Roguelike</h2>
     <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      Roguelike is a subgenre of role-playing video game characterized by a dungeon crawl through procedurally generated levels and turn-based gameplay.
+    </p>
+    <p slot="description">
+      I started this project as a group of ideas for the 7DRL Challenge 2019.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
     <li slot="tools">Javascript</li>
@@ -123,7 +129,10 @@ export const projectsHTML = {
     ${navigation('roguelike', 'trackicon-invaders')}
     <h2 slot="title">Random Cave</h2>
     <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      On a 4x4 grid, the algorithm tries to find the correct path using all available squares.
+    </p>
+    <p slot="description">
+      The algorithm starts in the bottom right row and continues straight until hits the last element, or random values move up to the next row. Then, the algorithm starts again.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
     <li slot="tools">Javascript</li>
@@ -139,7 +148,13 @@ export const projectsHTML = {
     ${navigation('random-cave', 'triangle-pattern')}
     <h2 slot="title">Trackicon Invaders</h2>
     <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      TrackiconInvaders is a Space Invaders style visual representation using Spotify Web API seeds recommendations.
+    </p>
+    <p slot="description">
+      When the user selects a genre, the game gets the recommendations from Spotify Web API and generates a type of Invader as a grid of 5x5 in an attempt to create the classic Space Invaders game. Each Invader is made using the name of the track related to the music genre previously selected.
+    </p>
+    <p slot="description">
+      When the Identicon / Invader is destroyed, a 30 seconds preview of the song is played.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
     <li slot="tools">Javascript</li>
@@ -156,7 +171,7 @@ export const projectsHTML = {
     ${navigation('trackicon-invaders', 'qadre')}
     <h2 slot="title">Triangle Pattern</h2>
     <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      I'm using p5js to explore generative art and create random colour compositions using a triangle primitive as a base. Considering rows, columns and size, the starting point for the pattern is quite straightforward. Random values indicate if the algorithm draws one triangle or four smaller triangles.
     </p>
     <li slot="tools-title" class="tools-title">Tools</li>
     <li slot="tools">Javascript</li>
