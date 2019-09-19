@@ -50,24 +50,8 @@ function navigation(prevWork, nextWork) {
 
 export const projectsHTML = {
   // Work
-  'qadre': `
-    ${navigation('triangle-pattern', 'gamesys')}
-    <h2 slot="title">Qadre</h2>
-    <p slot="description">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    </p>
-    <li slot="tools-title" class="tools-title">Tools</li>
-    <li slot="tools">HTML5 / CSS3</li>
-    <li slot="tools">Javascript / TypeScript</li>
-    <li slot="tools">React / Redux</li>
-    <li slot="tools">Etherum Solidity / Web3 / Ganache</li>
-    <li slot="tools">Blockchain</li>
-    <image-grid slot="gallery">
-      <img slot="md" src="assets/qadre/screenshot-1.png">
-    </image-grid>
-  `,
   'gamesys': `
-    ${navigation('qadre', 'seven-monkeys')}
+    ${navigation('triangle-pattern', 'seven-monkeys')}
     <h2 slot="title">Gamesys</h2>
     <p slot="description">
       As part of my role as Frontend Developer at Gamesys, I worked in the process of product development for a variety of poker games and multiline slot games.
@@ -81,6 +65,7 @@ export const projectsHTML = {
       <img slot="md" src="assets/gamesys/screenshot-virgin.png">
       <img slot="md" src="assets/gamesys/screenshot-jungle-jump.png">
       <img slot="md" src="assets/gamesys/screenshot-barnayard.png">
+      <img slot="md" src="assets/gamesys/screenshot-corporate.png">
     </image-grid>
   `,
   // Side projects
@@ -168,7 +153,7 @@ export const projectsHTML = {
     </image-grid>
   `,
   'triangle-pattern': `
-    ${navigation('trackicon-invaders', 'qadre')}
+    ${navigation('trackicon-invaders', 'gamesys')}
     <h2 slot="title">Triangle Pattern</h2>
     <p slot="description">
       I'm using p5js to explore generative art and create random colour compositions using a triangle primitive as a base. Considering rows, columns and size, the starting point for the pattern is quite straightforward. Random values indicate if the algorithm draws one triangle or four smaller triangles.

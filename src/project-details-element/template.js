@@ -38,10 +38,12 @@ template.innerHTML = `
     }
     ::slotted(li) {
       font-size: .9rem;
+      font-style: italic;
       line-height: 26px;
-      opacity: .7;
+      opacity: .5;
     }
     ::slotted(.tools-title) {
+      font-style: normal !important;
       font-weight: 500;
       margin-bottom: .5em;
       opacity: .3;
