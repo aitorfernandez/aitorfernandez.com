@@ -5,7 +5,8 @@
   "author": "Aitor <helloimaitor@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "NODE_ENV=production rollup -c",
+    "build": "NODE_ENV=production rollup -c;yarn minifier",
+    "minifier": "html-minifier --collapse-whitespace index.html -o dist/index.html",
     "start": "rollup -c -w",
     "test": "jest"
   },
@@ -18,6 +19,7 @@
     "eslint-loader": "^3.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.15.2",
+    "html-minifier": "^4.0.0",
     "jest": "^24.9.0",
     "rollup": "^1.20.2",
     "rollup-plugin-babel-minify": "^9.0.0",
