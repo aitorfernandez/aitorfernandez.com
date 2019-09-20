@@ -73,7 +73,7 @@ export const projectsHTML = {
     ${navigation('gamesys', 'roguelike')}
     <h2 slot="title">Seven Monkeys</h2>
     <p slot="description">
-      An iOS Poker Puzzle released in 2016 released on App Store. The game uses Cocos2dx-3.X Engine.
+      An iOS Poker Puzzle released in 2016 on App Store. The game uses Cocos2dx-3.X Engine.
     </p>
     <p slot="description">
       The game generates a variety of puzzles to help the player to understand the rules and mathematics of Texas Hold'em Poker. There are seven puzzles with three levels of difficulty each; they are about: Poker Hands, Poker Positions, Best Hands, Flop Textures, Outs, Pot Odds, PreFlop Strategy.
