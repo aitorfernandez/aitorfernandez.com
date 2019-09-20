@@ -37,6 +37,58 @@
 
     <title>Aitor Fern&aacute;ndez | Personal Portfolio</title>
 
+    <style>
+      .none {
+        display: none;
+      }
+      .block {
+        display: block;
+      }
+      #loading {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #loading .text {
+        color: LightSteelBlue;
+        display: inline-block;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        margin-left: 12px;
+      }
+      .bounceball {
+        display: inline-block;
+        height: 32px;
+        position: relative;
+        width: 12px;
+      }
+      .bounceball:before {
+        animation: bounce 750ms alternate infinite ease-in-out;
+        background-color: LightSteelBlue;
+        border-radius: 50%;
+        content: '';
+        display: block;
+        height: 12px;
+        position: absolute;
+        top: 0;
+        transform-origin: 50%;
+        width: 12px;
+      }
+      @keyframes bounce {
+        0% {
+          top: 32px;
+        }
+        35% {
+          height: 12px;
+        }
+        100% {
+          top: 0;
+        }
+      }
+    </style>
+
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -47,87 +99,101 @@
     <script src="./dist/main.min.js" defer></script>
   </head>
   <body>
-    <div class="bg position-relative">
-      <background-sketch slot="bg"></background-sketch>
+    <div id="loading" class="block">
+      <div class="bounceball"></div>
+      <div class="text">Loading</div>
     </div>
-    <div class="app position-relative">
-      <header>
-        <welcome-resume></welcome-resume>
-        <app-header>
-          <more-action></more-action>
-        </app-header>
-      </header>
-      <main>
-        <div class="position-relative">
-          <div class="margin">
-            <project-list>
-              <project-item slot="work" slug="gamesys">
-                <programming-language name="ruby"></programming-language>
-                <programming-language name="lua"></programming-language>
-                <programming-language name="javascript"></programming-language>
-              </project-item>
+    <div id="root" class="none">
+      <div class="bg position-relative">
+        <background-sketch slot="bg"></background-sketch>
+      </div>
+      <div class="app position-relative">
+        <header>
+          <welcome-resume></welcome-resume>
+          <app-header>
+            <more-action></more-action>
+          </app-header>
+        </header>
+        <main>
+          <div class="position-relative">
+            <div class="margin">
+              <project-list>
+                <project-item slot="work" slug="gamesys">
+                  <programming-language name="ruby"></programming-language>
+                  <programming-language name="lua"></programming-language>
+                  <programming-language name="javascript"></programming-language>
+                </project-item>
 
-              <project-item slot="side" slug="seven-monkeys">
-                <programming-language name="c++"></programming-language>
-              </project-item>
+                <project-item slot="side" slug="seven-monkeys">
+                  <programming-language name="c++"></programming-language>
+                </project-item>
 
-              <project-item slot="lab" slug="roguelike">
-                <programming-language name="javascript"></programming-language>
-              </project-item>
-              <project-item slot="lab" slug="random-cave">
-                <programming-language name="javascript"></programming-language>
-              </project-item>
-              <project-item slot="lab" slug="trackicon-invaders">
-                <programming-language name="javascript"></programming-language>
-              </project-item>
-              <project-item slot="lab" slug="triangle-pattern">
-                <programming-language name="javascript"></programming-language>
-              </project-item>
-            </project-list>
+                <project-item slot="lab" slug="roguelike">
+                  <programming-language name="javascript"></programming-language>
+                </project-item>
+                <project-item slot="lab" slug="random-cave">
+                  <programming-language name="javascript"></programming-language>
+                </project-item>
+                <project-item slot="lab" slug="trackicon-invaders">
+                  <programming-language name="javascript"></programming-language>
+                </project-item>
+                <project-item slot="lab" slug="triangle-pattern">
+                  <programming-language name="javascript"></programming-language>
+                </project-item>
+              </project-list>
+            </div>
+            <div class="project-details-container margin with-offset"></div>
           </div>
-          <div class="project-details-container margin with-offset"></div>
-        </div>
-      </main>
-      <footer>
-        <app-footer class="margin">
-          <a href="https://github.com/aitorfernandez" target="_blank" title="Follow aitorfernandez on Github">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://dev.to/aitorfernandez" target="_blank" title="Follow aitorfernandez on Dev.to">
-            <i class="fab fa-dev"></i>
-          </a>
-          <a href="https://twitter.com/aitorfernandez" target="_blank" title="Follow aitorfernandez on Twitter">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="http://t.me/aitorfernandez" target="_blank">
-            <i class="fab fa-telegram"></i>
-          </a>
-          <a href="&#77;&#97;&#105;&#76;&#116;&#79;&#58;&#104;&#101;&#108;&#108;&#111;&#105;&#109;&#97;&#105;&#116;&#111;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#72;&#101;&#108;&#108;&#111;&#37;&#50;&#48;&#116;&#104;&#101;&#114;&#101;&#37;&#50;&#49;">
-            <i class="fas fa-envelope"></i>
-          </a>
-        </app-footer>
-      </footer>
-    </div>
-    <div class="bg-controller position-relative">
-      <background-controller>
-        <round-dot slot="dot" slug="game-of-life"></round-dot>
-        <round-dot slot="dot" slug="math-motion"></round-dot>
-        <round-dot slot="dot" slug="gravitational-attraction"></round-dot>
-      </background-controller>
+        </main>
+        <footer>
+          <app-footer class="margin">
+            <a href="https://github.com/aitorfernandez" target="_blank" title="Follow aitorfernandez on Github">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://dev.to/aitorfernandez" target="_blank" title="Follow aitorfernandez on Dev.to">
+              <i class="fab fa-dev"></i>
+            </a>
+            <a href="https://twitter.com/aitorfernandez" target="_blank" title="Follow aitorfernandez on Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="http://t.me/aitorfernandez" target="_blank">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a href="&#77;&#97;&#105;&#76;&#116;&#79;&#58;&#104;&#101;&#108;&#108;&#111;&#105;&#109;&#97;&#105;&#116;&#111;&#114;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#72;&#101;&#108;&#108;&#111;&#37;&#50;&#48;&#116;&#104;&#101;&#114;&#101;&#37;&#50;&#49;">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </app-footer>
+        </footer>
+      </div>
+      <div class="bg-controller position-relative">
+        <background-controller>
+          <round-dot slot="dot" slug="game-of-life"></round-dot>
+          <round-dot slot="dot" slug="math-motion"></round-dot>
+          <round-dot slot="dot" slug="gravitational-attraction"></round-dot>
+        </background-controller>
+      </div>
     </div>
     <script>
       if (!(window.customElements && document.body.attachShadow)) {
         document.querySelector('.app').innerHTML = "<b>Your browser doesn't support Shadow DOM and Custom Elements v1.</b>"
       }
     </script>
-    <!--
+    <script>
+      document.addEventListener('readystatechange', ({ target }) => {
+        if (target.readyState === 'complete') {
+          document.getElementById('loading').classList.add('none')
+          document.getElementById('loading').classList.remove('block')
+
+          document.getElementById('root').classList.remove('none')
+        }
+      })
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-74258232-1"></script>
     <script>
       window.dataLayer = window.dataLayer || []
-      function gtag(){dataLayer.push(arguments)}
+      function gtag() { dataLayer.push(arguments) }
       gtag('js', new Date())
       gtag('config', 'UA-74258232-1')
     </script>
-    -->
   </body>
 </html>
